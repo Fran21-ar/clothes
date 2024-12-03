@@ -1,0 +1,273 @@
+/* Reset general */
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden; /* Evita desbordamiento horizontal */
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+  
+  /* Header general */
+.header {
+    justify-content: center;
+    width: 100%; /* Ocupa todo el ancho del viewport */
+    background-color: #1B1B1B;
+    position: fixed; /* Fijo en la parte superior */
+    top: 0;
+    z-index: 1000; /* Encima de otros elementos */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Sombra para separación */
+    transition: all 0.3s ease; /* Transición para cambios al reducir tamaño */
+}
+  
+  /* Contenido principal del header */
+.header-main {
+    display: flex;
+    justify-content: space-between; /* Espacio entre los elementos */
+    align-items: center; /* Centrado vertical */
+    width: 70%; /* Ancho máximo del contenido */
+    margin: 0 auto; /* Centra el contenido horizontalmente */
+    padding: 10px 20px; /* Espaciado interno */
+}
+  
+  /* Logo */
+.header-logo {
+    height: 60px; /* Tamaño del logo */
+    transition: height 0.3s ease; /* Transición suave para reducir tamaño */
+}
+  
+  /* Buscador */
+.header-search {
+    width: 30%; /* Ancho fijo */
+    background: #3a3a3a;
+    text-align: center; /* Texto centrado */
+    padding: 5px; /* Espaciado interno */
+    font-size: 14px; /* Tamaño de texto */
+    border: none; /* Borde del input */
+    border-radius: 4px; /* Bordes redondeados */
+    outline: none; /* Quita borde azul al enfocar */
+    color: aliceblue;
+    transition: width 0.3s ease; /* Transición para cambio de tamaño si necesario */
+}
+
+.menu-carito {
+    display: flex; /* Activa Flexbox */
+    justify-content: flex-end; /* Alinea los elementos a la derecha */
+    align-items: center; /* Centra verticalmente */
+    gap: 20px; /* Espacio entre el carrito y el menú */
+} 
+
+  /* Carrito */
+.header-cart {
+    font-size: 24px; /* Tamaño del ícono */
+    cursor: pointer; /* Indica que es interactivo */
+}
+  
+  /* Menú */
+.menu {
+    font-size: 24px; /* Tamaño del ícono */
+    cursor: pointer; /* Indica que es interactivo */
+    color: aliceblue;
+}
+
+.img{
+    width: 100%;
+    height: 60%;
+}
+
+/* Contenedor principal del catálogo */
+.main {
+  margin-top: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  background-color: #ffffff;
+}
+
+/* Sección de catálogo */
+.main-section {
+  display: grid; /* Activa el Grid Layout */
+  grid-template-columns: repeat(4, 1fr); /* 4 columnas por defecto */
+  gap: 20px; /* Espaciado entre los elementos */
+}
+
+/* Elementos del catálogo */
+.enlace-ropa {
+  color: white;
+  width: 300px;
+  height: 300px;
+  background-color: #000; /* Fondo negro para visualizar */
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Media queries para pantallas más pequeñas */
+
+/* 3 columnas para pantallas menores a 1200px */
+@media (max-width: 1200px) {
+  .main-section {
+      grid-template-columns: repeat(3, 1fr); /* Cambia a 3 columnas */
+  }
+}
+
+/* 2 columnas para pantallas menores a 768px */
+@media (max-width: 768px) {
+  .main-section {
+      grid-template-columns: repeat(2, 1fr); /* Cambia a 2 columnas */
+  }
+}
+
+/* 1 columna para pantallas menores a 480px */
+@media (max-width: 480px) {
+  .main-section {
+      grid-template-columns: 1fr; /* Cambia a 1 columna */
+  }
+}
+
+
+/* Estilo para la sección */
+.info {
+  margin-top: 150px;
+  display: flex; /* Activa Flexbox */
+  justify-content: space-between; /* Espaciado uniforme entre columnas */
+  align-items: center; /* Centrado vertical */
+  height: 200px; /* Altura de la sección */
+  padding: 0 20px; /* Espaciado interno en los laterales */
+  background-color: #ececec; /* Fondo claro para destacar la sección */
+}
+
+/* Estilo para cada columna */
+.info > div {
+  text-align: center; /* Centra el contenido dentro de cada columna */
+  flex: 1; /* Asegura que cada columna ocupe el mismo espacio */
+  padding: 0 10px; /* Espaciado interno entre columnas */
+}
+
+/* Estilo para los íconos */
+.info p:first-child {
+  font-size: 24px; /* Aumenta el tamaño de los íconos */
+  margin: 0; /* Quita márgenes por defecto */
+}
+
+/* Estilo para los títulos */
+.info h4 {
+  margin: 5px 0; /* Espaciado arriba y abajo */
+  font-size: 16px; /* Tamaño moderado del título */
+  color: #333; /* Texto oscuro */
+}
+
+/* Estilo para los textos */
+.info p:not(:first-child) {
+  margin: 0; /* Quita márgenes extra */
+  font-size: 14px; /* Tamaño reducido del texto */
+  color: #666; /* Texto gris */
+}
+
+
+.testimony {
+    margin-top: 150px;
+    padding: 20px; /* Espaciado interno */
+    text-align: center; /* Centra el título */
+    margin-bottom: 100px;
+}
+  
+  /* Estilo del título */
+.testimony-title {
+    font-size: 24px; /* Tamaño de fuente */
+    font-weight: bold; /* Negrita */
+    margin-bottom: 20px; /* Espacio entre el título y los elementos */
+    color: #333; /* Color del texto */
+}
+  
+  /* Contenedor de los testimonios */
+.testimony-section {
+  display: flex; /* Activa Flexbox */
+  justify-content: center; /* Centra los elementos horizontalmente */
+  gap: 20px; /* Reduce el espacio entre los elementos (ajustado a 20px) */
+  flex-wrap: nowrap; /* Evita que los elementos se vayan a la siguiente línea */
+  max-width: 100%; /* Asegura que el contenedor ocupe el 100% del ancho disponible */
+  margin: 0 auto; /* Centra el contenedor si tiene un ancho mayor que el 100% */
+}
+  
+  /* Testimonios individuales */
+.testimony-div {
+    width: 150px;
+    height: 300px;
+    background-color: #727272; /* Color de fondo para visualizar */
+    border-radius: 4px; /* Bordes redondeados opcionales */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra opcional */
+}
+
+.footer {
+  background-color: #0f0f0f; /* Fondo oscuro */
+  color: white; /* Texto blanco */
+  padding: 20px; /* Espaciado interno */
+  height: 400px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+/* Contenedor principal del footer */
+.footer-section {
+  display: flex; /* Activa Flexbox */
+  justify-content: space-between; /* Espacia los divs uniformemente */
+  align-items: center;
+  gap: 300px; /* Espaciado entre los divs */
+  max-width: 1200px; /* Ancho máximo para evitar que los elementos se expandan demasiado */
+  margin: 0 auto; /* Centra el contenedor horizontalmente */
+}
+
+/* Estilos para las columnas */
+.footer-section > div {
+  flex: 1; /* Asegura que todos los divs ocupen el mismo espacio */
+  text-align: center; /* Centra el contenido */
+}
+
+/* Estilo para los enlaces en las redes */
+.redes a {
+  display: block; /* Cada enlace en una línea nueva */
+  color: white;
+  text-decoration: none;
+  margin-bottom: 5px; /* Espaciado entre enlaces */
+}
+
+/* Estilo para los inputs del formulario */
+.formulario input {
+  display: block; /* Cada input en una nueva línea */
+  width: 100%; /* Asegura que ocupen todo el ancho del contenedor */
+  margin-bottom: 10px; /* Espaciado entre los inputs */
+  padding: 8px; /* Espaciado interno */
+  border: none; /* Quita los bordes por defecto */
+  border-radius: 5px; /* Bordes redondeados */
+}
+
+/* Media queries para hacerlo responsive */
+
+/* Para pantallas menores a 768px (tablets y móviles grandes) */
+@media (max-width: 768px) {
+  .footer-section {
+    flex-direction: column; /* Cambia a disposición en columnas */
+    gap: 20px; /* Reduce el espacio entre los divs */
+    text-align: center; /* Centra el texto para todos los divs */
+  }
+
+  .footer-section > div {
+    flex: none; /* Permite que los divs tomen su tamaño natural */
+    width: 100%; /* Asegura que ocupen todo el ancho disponible */
+  }
+}
+
+/* Para pantallas menores a 480px (móviles pequeños) */
+@media (max-width: 480px) {
+  .footer {
+    height: auto; /* Deja que la altura sea dinámica */
+    padding: 30px 10px; /* Reduce el padding */
+  }
+
+  .formulario input {
+    width: 90%; /* Reduce el ancho de los inputs */
+    margin: 0 auto 10px; /* Centra los inputs con margen inferior */
+  }
+}
